@@ -1,4 +1,3 @@
-import SchedulerWorker from '../workers/scheduler.worker.js?worker'
 import { assemblePlan } from './plan'
 
 let worker
@@ -7,7 +6,9 @@ const pending = new Map()
 
 function getWorker() {
   if (!worker) {
-    worker = new SchedulerWorker()
+    worker = new Worker(new URL('../workers/scheduler.worker.js', import.meta.url), {
+      type: 'module',
+    })
     worker.onmessage = ({ data }) => {
       const request = pending.get(data.id)
       if (!request) return
