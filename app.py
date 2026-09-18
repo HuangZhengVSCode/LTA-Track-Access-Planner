@@ -31,89 +31,77 @@ st.markdown(
     """
 <style>
 
-/* ==========================================================
+/* ----------------------------------------------------------
    MAIN BACKGROUND
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 .stApp {
-
     background:
-
         radial-gradient(
             ellipse at 50% 115%,
-            rgba(0, 145, 255, 0.50) 0%,
-            rgba(0, 90, 210, 0.28) 23%,
-            rgba(0, 40, 120, 0.12) 45%,
-            transparent 68%
+            rgba(0, 145, 255, 0.46) 0%,
+            rgba(0, 90, 210, 0.25) 24%,
+            rgba(0, 40, 120, 0.10) 48%,
+            transparent 70%
         ),
-
         linear-gradient(
             180deg,
             #010307 0%,
-            #020812 28%,
-            #031427 62%,
+            #020812 30%,
+            #031427 64%,
             #052c50 100%
         );
 
     background-attachment: fixed;
-
     color: #eaf4ff;
 }
 
 
-/* ==========================================================
+/* ----------------------------------------------------------
    STREAMLIT HEADER
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 [data-testid="stHeader"] {
     background: transparent;
 }
 
 
-/* ==========================================================
-   MAIN CONTENT
-   ========================================================== */
+/* ----------------------------------------------------------
+   MAIN PAGE WIDTH
+   ---------------------------------------------------------- */
 
 .block-container {
-
-    padding-top: 2rem;
-
-    padding-bottom: 4rem;
-
+    padding-top: 1.4rem;
+    padding-bottom: 3rem;
     max-width: 1550px;
 }
 
 
-/* ==========================================================
+/* ----------------------------------------------------------
    NORMAL TEXT
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 .stApp h1,
 .stApp h2,
 .stApp h3 {
-
     color: #ffffff !important;
 }
 
-
 .stApp p,
 .stApp label {
-
     color: #c8dceb;
 }
 
 
-/* ==========================================================
+/* ----------------------------------------------------------
    SIDEBAR
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 section[data-testid="stSidebar"] {
-
     background:
-
         linear-gradient(
             180deg,
-            rgba(1, 6, 12, 0.99),
+            rgba(1, 6, 12, 0.995),
             rgba(3, 20, 38, 0.99) 58%,
             rgba(4, 39, 70, 0.99)
         );
@@ -126,25 +114,113 @@ section[data-testid="stSidebar"] {
 section[data-testid="stSidebar"] h1,
 section[data-testid="stSidebar"] h2,
 section[data-testid="stSidebar"] h3 {
-
     color: #ffffff !important;
 }
 
 
 section[data-testid="stSidebar"] p,
 section[data-testid="stSidebar"] label {
-
     color: #b8cfe0 !important;
 }
 
 
-/* ==========================================================
+/* ----------------------------------------------------------
+   SIDEBAR BRAND
+   ---------------------------------------------------------- */
+
+.sidebar-brand {
+    margin-bottom: 12px;
+}
+
+
+.sidebar-brand-title {
+    color: #ffffff !important;
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+
+.sidebar-brand-subtitle {
+    color: #7990a3 !important;
+    font-size: 0.86rem;
+    margin-top: 6px;
+}
+
+
+/* ----------------------------------------------------------
+   SCENARIO STATUS PANEL
+   ---------------------------------------------------------- */
+
+.strategy-panel {
+    margin-top: 12px;
+    padding: 13px 14px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(4, 31, 55, 0.82);
+
+    border:
+        1px solid rgba(70, 160, 220, 0.17);
+}
+
+
+.strategy-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 8px 0;
+
+    color: #bcd2e2 !important;
+
+    font-size: 0.78rem;
+    font-weight: 650;
+}
+
+
+.strategy-dot-blue,
+.strategy-dot-green,
+.strategy-dot-yellow {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    flex: 0 0 auto;
+}
+
+
+.strategy-dot-blue {
+    background: #39a9ff;
+
+    box-shadow:
+        0 0 6px rgba(57, 169, 255, 0.60);
+}
+
+
+.strategy-dot-green {
+    background: #39d98a;
+
+    box-shadow:
+        0 0 6px rgba(57, 217, 138, 0.60);
+}
+
+
+.strategy-dot-yellow {
+    background: #ffd84d;
+
+    box-shadow:
+        0 0 6px rgba(255, 216, 77, 0.60);
+}
+
+
+/* ----------------------------------------------------------
    MAIN HEADER PANEL
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 .main-header-panel {
-
-    padding: 24px 28px;
+    padding: 22px 28px;
 
     border-radius: 16px;
 
@@ -152,38 +228,40 @@ section[data-testid="stSidebar"] label {
         1px solid rgba(80, 170, 255, 0.18);
 
     background:
-        rgba(1, 9, 18, 0.42);
+        rgba(1, 9, 18, 0.45);
 
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
 
-.header-eyebrow {
+/* Smaller header after schedule generation */
 
-    color: #8396a8 !important;
-
-    font-size: 0.82rem;
-
-    font-weight: 650;
-
-    letter-spacing: 0.4px;
-
+.main-header-panel.compact {
+    padding: 15px 24px;
     margin-bottom: 18px;
 }
 
 
-/* ==========================================================
+.header-eyebrow {
+    color: #8396a8 !important;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ----------------------------------------------------------
    WHITE TITLE CLOUD
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 .title-cloud {
-
     display: inline-block;
 
-    position: relative;
-
     background:
-
         linear-gradient(
             135deg,
             #ffffff 0%,
@@ -192,26 +270,26 @@ section[data-testid="stSidebar"] label {
 
     color: #082f56 !important;
 
-    padding: 13px 27px;
+    padding: 12px 25px;
 
     border-radius: 28px;
 
     font-size: clamp(
-        1.55rem,
-        2.5vw,
-        2.45rem
+        1.5rem,
+        2.35vw,
+        2.3rem
     );
 
-    font-weight: 800;
+    font-weight: 850;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.45px;
 
     border:
         1px solid rgba(180, 215, 240, 0.90);
 
     box-shadow:
         0 7px 24px rgba(0, 0, 0, 0.25),
-        0 0 20px rgba(255, 255, 255, 0.14);
+        0 0 20px rgba(255, 255, 255, 0.12);
 
     transition:
         transform 0.25s ease,
@@ -219,104 +297,71 @@ section[data-testid="stSidebar"] label {
 }
 
 
-/* Cloud bumps */
+.compact .title-cloud {
+    padding: 9px 21px;
 
-.title-cloud::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 32px;
-
-    height: 32px;
-
-    border-radius: 50%;
-
-    background: #ffffff;
-
-    left: 35px;
-
-    top: -10px;
-
-    z-index: -1;
+    font-size: clamp(
+        1.3rem,
+        2vw,
+        1.9rem
+    );
 }
 
-
-.title-cloud::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 24px;
-
-    height: 24px;
-
-    border-radius: 50%;
-
-    background: #ffffff;
-
-    right: 48px;
-
-    top: -7px;
-
-    z-index: -1;
-}
-
-
-/* Title glow */
 
 .title-cloud:hover {
-
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
     box-shadow:
-
         0 10px 30px rgba(0, 0, 0, 0.30),
-
-        0 0 12px rgba(255, 255, 255, 0.50),
-
+        0 0 13px rgba(255, 255, 255, 0.50),
         0 0 28px rgba(80, 185, 255, 0.30);
 }
 
 
 .header-subtitle {
-
     color: #c9deee !important;
 
-    margin-top: 22px;
+    margin-top: 18px;
 
-    font-size: 1rem;
+    font-size: 0.94rem;
 }
 
 
-/* ==========================================================
+.compact .header-subtitle {
+    margin-top: 12px;
+    font-size: 0.86rem;
+}
+
+
+/* ----------------------------------------------------------
    ONLINE STATUS
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 .online-status {
-
     display: flex;
-
     align-items: center;
 
-    gap: 11px;
+    gap: 10px;
 
-    margin-top: 20px;
+    margin-top: 16px;
 
     color: #dfffee !important;
 
-    font-weight: 700;
+    font-size: 0.88rem;
+
+    font-weight: 750;
+}
+
+
+.compact .online-status {
+    margin-top: 11px;
+    font-size: 0.80rem;
 }
 
 
 .online-dot {
-
-    width: 11px;
-
-    height: 11px;
+    width: 10px;
+    height: 10px;
 
     border-radius: 50%;
 
@@ -333,36 +378,25 @@ section[data-testid="stSidebar"] label {
 @keyframes onlinePulse {
 
     0% {
-
         opacity: 1;
-
-        transform:
-            scale(1);
+        transform: scale(1);
 
         box-shadow:
             0 0 5px #38f58a,
             0 0 10px rgba(56, 245, 138, 0.55);
     }
 
-
     50% {
-
         opacity: 0.45;
-
-        transform:
-            scale(0.72);
+        transform: scale(0.72);
 
         box-shadow:
             0 0 2px #38f58a;
     }
 
-
     100% {
-
         opacity: 1;
-
-        transform:
-            scale(1);
+        transform: scale(1);
 
         box-shadow:
             0 0 7px #38f58a,
@@ -371,136 +405,21 @@ section[data-testid="stSidebar"] label {
 }
 
 
-/* ==========================================================
-   WHITE INFORMATION CARDS
-   ========================================================== */
+/* ----------------------------------------------------------
+   PRE-SCHEDULE INFORMATION CARDS
+   ---------------------------------------------------------- */
 
 .white-info-card {
-
     background:
-
         linear-gradient(
             145deg,
             #ffffff 0%,
             #f5f9fd 100%
         );
 
-    border-radius: 15px;
-
-    padding: 22px 24px;
-
-    height: 165px;
-
-    box-sizing: border-box;
-
-    border:
-        1px solid #d7e5ef;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.22);
-
-    transition:
-        transform 0.20s ease,
-        box-shadow 0.20s ease;
-}
-
-
-.white-info-card:hover {
-
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.28),
-        0 0 16px rgba(70, 175, 255, 0.16);
-}
-
-
-.white-card-title {
-
-    color: #0b365d !important;
-
-    font-size: 1.35rem;
-
-    font-weight: 750;
-
-    margin-bottom: 18px;
-}
-
-
-.white-card-value {
-
-    color: #164d77 !important;
-
-    font-size: 1rem;
-
-    font-weight: 650;
-}
-
-
-.white-card-caption {
-
-    color: #657d91 !important;
-
-    font-size: 0.88rem;
-
-    margin-top: 13px;
-}
-
-
-/* Ready indicator */
-
-.ready-value {
-
-    display: inline-block;
-
-    color: #15704a !important;
-
-    background: #e5f8ef;
-
-    border:
-        1px solid #b8ead3;
-
-    border-radius: 8px;
-
-    padding: 7px 12px;
-
-    font-weight: 750;
-}
-
-
-/* Standby indicator */
-
-.standby-value {
-
-    display: inline-block;
-
-    color: #6a7884 !important;
-
-    background: #edf2f5;
-
-    border:
-        1px solid #d5dfe6;
-
-    border-radius: 8px;
-
-    padding: 7px 12px;
-
-    font-weight: 700;
-}
-
-
-/* ==========================================================
-   WHITE KPI CARDS
-   ========================================================== */
-
-.white-kpi-card {
-
-    background: #ffffff;
-
     border-radius: 14px;
 
-    padding: 21px 23px;
+    padding: 20px 22px;
 
     height: 150px;
 
@@ -510,7 +429,7 @@ section[data-testid="stSidebar"] label {
         1px solid #d7e5ef;
 
     box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.20);
+        0 8px 25px rgba(0, 0, 0, 0.20);
 
     transition:
         transform 0.20s ease,
@@ -518,111 +437,317 @@ section[data-testid="stSidebar"] label {
 }
 
 
-.white-kpi-card:hover {
-
-    transform:
-        translateY(-3px);
+.white-info-card:hover {
+    transform: translateY(-3px);
 
     box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.28);
+        0 12px 30px rgba(0, 0, 0, 0.28),
+        0 0 16px rgba(70, 175, 255, 0.16);
+}
+
+
+.white-card-title {
+    color: #0b365d !important;
+
+    font-size: 1.25rem;
+
+    font-weight: 800;
+
+    margin-bottom: 16px;
+}
+
+
+.white-card-value {
+    color: #164d77 !important;
+
+    font-size: 0.98rem;
+
+    font-weight: 700;
+}
+
+
+.white-card-caption {
+    color: #657d91 !important;
+
+    font-size: 0.82rem;
+
+    margin-top: 11px;
+}
+
+
+.ready-value {
+    display: inline-block;
+
+    color: #15704a !important;
+
+    background: #e5f8ef;
+
+    border:
+        1px solid #b8ead3;
+
+    border-radius: 7px;
+
+    padding: 6px 11px;
+
+    font-weight: 800;
+}
+
+
+.standby-value {
+    display: inline-block;
+
+    color: #6a7884 !important;
+
+    background: #edf2f5;
+
+    border:
+        1px solid #d5dfe6;
+
+    border-radius: 7px;
+
+    padding: 6px 11px;
+
+    font-weight: 750;
+}
+
+
+/* ----------------------------------------------------------
+   COMPACT KPI CARDS
+   ---------------------------------------------------------- */
+
+.white-kpi-card {
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    padding: 16px 18px;
+
+    height: 112px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid #d7e5ef;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.white-kpi-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 
 .white-kpi-label {
+    color: #355570 !important;
 
-    color: #24496a !important;
+    font-size: 0.76rem;
 
-    font-size: 0.92rem;
+    font-weight: 750;
 
-    font-weight: 650;
+    text-transform: uppercase;
+
+    letter-spacing: 0.35px;
 
     margin-bottom: 10px;
 }
 
 
 .white-kpi-value {
-
     color: #073763 !important;
 
-    font-size: 2.25rem;
+    font-size: 1.85rem;
 
-    font-weight: 750;
+    font-weight: 850;
 
     line-height: 1;
 }
 
 
-/* Urgent KPI */
-
 .white-kpi-danger-label {
+    color: #cf4b55 !important;
 
-    color: #d94f59 !important;
+    font-size: 0.76rem;
 
-    font-size: 0.92rem;
+    font-weight: 800;
 
-    font-weight: 700;
+    text-transform: uppercase;
+
+    letter-spacing: 0.35px;
 
     margin-bottom: 10px;
 }
 
 
 .white-kpi-danger-value {
+    color: #ef5b63 !important;
 
-    color: #ef646c !important;
+    font-size: 1.85rem;
 
-    font-size: 2.25rem;
-
-    font-weight: 750;
+    font-weight: 850;
 
     line-height: 1;
 }
 
 
-/* ==========================================================
-   CONSTRAINT STATUS
-   ========================================================== */
+.white-kpi-success-label {
+    color: #26734d !important;
 
-.status-good {
-
-    color: #25A65A !important;
-
-    font-size: 2.05rem;
+    font-size: 0.76rem;
 
     font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.35px;
+
+    margin-bottom: 10px;
+}
+
+
+.white-kpi-success-value {
+    color: #1c9b5f !important;
+
+    font-size: 1.85rem;
+
+    font-weight: 850;
+
+    line-height: 1;
+}
+
+
+/* ----------------------------------------------------------
+   SCHEDULE HEALTH STRIP
+   ---------------------------------------------------------- */
+
+.health-strip {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 11px 14px;
+
+    margin: 17px 0 20px 0;
+
+    border-radius: 10px;
+
+    background:
+        rgba(3, 27, 47, 0.88);
+
+    border:
+        1px solid rgba(70, 170, 225, 0.18);
+
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.14);
+}
+
+
+.health-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: #c7dbe9 !important;
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+}
+
+
+.health-dot-green,
+.health-dot-red,
+.health-dot-blue,
+.health-dot-yellow {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+}
+
+
+.health-dot-green {
+    background: #39d98a;
+}
+
+
+.health-dot-red {
+    background: #ef5b63;
+}
+
+
+.health-dot-blue {
+    background: #39a9ff;
+}
+
+
+.health-dot-yellow {
+    background: #ffd84d;
+}
+
+
+/* ----------------------------------------------------------
+   CONSTRAINT STATUS
+   ---------------------------------------------------------- */
+
+.status-good {
+    color: #25A65A !important;
+
+    font-size: 1.75rem;
+
+    font-weight: 850;
 
     line-height: 1.05;
 }
 
 
 .status-bad {
-
     color: #EF5B63 !important;
 
-    font-size: 1.85rem;
+    font-size: 1.55rem;
 
-    font-weight: 800;
+    font-weight: 850;
 
     line-height: 1.05;
 }
 
 
-/* ==========================================================
+/* ----------------------------------------------------------
    BUTTONS
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 .stButton > button {
-
     width: 100%;
 
-    min-height: 46px;
+    min-height: 44px;
 
-    border-radius: 9px;
+    border-radius: 8px;
 
     border:
         1px solid #42b9ff !important;
 
     background:
-
         linear-gradient(
             100deg,
             #0758ad,
@@ -632,10 +757,10 @@ section[data-testid="stSidebar"] label {
 
     color: #ffffff !important;
 
-    font-weight: 700 !important;
+    font-weight: 750 !important;
 
     box-shadow:
-        0 5px 20px rgba(0, 125, 255, 0.25);
+        0 5px 20px rgba(0, 125, 255, 0.24);
 
     transition:
         transform 0.22s ease,
@@ -644,17 +769,13 @@ section[data-testid="stSidebar"] label {
 
 
 .stButton > button p {
-
     color: #ffffff !important;
-
-    font-weight: 700 !important;
+    font-weight: 750 !important;
 }
 
 
 .stButton > button:hover {
-
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
     border-color:
         #8ae3ff !important;
@@ -666,27 +787,24 @@ section[data-testid="stSidebar"] label {
 
 
 .stButton > button:disabled {
-
     background:
-
         linear-gradient(
             100deg,
             #153b5b,
             #185176
         ) !important;
 
-    opacity: 0.72;
+    opacity: 0.70;
 
     box-shadow: none;
 }
 
 
-/* ==========================================================
+/* ----------------------------------------------------------
    SELECT BOX
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 div[data-baseweb="select"] > div {
-
     background:
         #f7f9fc !important;
 
@@ -698,12 +816,11 @@ div[data-baseweb="select"] > div {
 }
 
 
-/* ==========================================================
+/* ----------------------------------------------------------
    FILE UPLOADER
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 [data-testid="stFileUploaderDropzone"] {
-
     background:
         rgba(7, 29, 52, 0.72) !important;
 
@@ -714,34 +831,31 @@ div[data-baseweb="select"] > div {
 }
 
 
-/* ==========================================================
+/* ----------------------------------------------------------
    TABS
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 button[data-baseweb="tab"] {
-
     color:
         #a7c2d7 !important;
 
-    font-weight: 500;
+    font-weight: 550;
 }
 
 
 button[data-baseweb="tab"][aria-selected="true"] {
-
     color:
         #ffffff !important;
 
-    font-weight: 700;
+    font-weight: 750;
 }
 
 
-/* ==========================================================
-   DATA TABLE
-   ========================================================== */
+/* ----------------------------------------------------------
+   TABLES
+   ---------------------------------------------------------- */
 
 [data-testid="stDataFrame"] {
-
     border:
         1px solid rgba(80, 170, 255, 0.15);
 
@@ -751,33 +865,28 @@ button[data-baseweb="tab"][aria-selected="true"] {
 }
 
 
-/* ==========================================================
-   ANIMATED SIDE-VIEW TRAIN
-   ========================================================== */
+/* ----------------------------------------------------------
+   ANIMATED TRAIN
+   ---------------------------------------------------------- */
 
 .train-status-row {
-
     display: flex;
 
     align-items: center;
 
     gap: 18px;
 
-    margin:
-        14px 0 20px 0;
+    margin: 12px 0 18px 0;
 
-    color:
-        #d7e8f5 !important;
+    color: #d7e8f5 !important;
 }
 
 
 .train-track {
-
     position: relative;
 
     width: 200px;
-
-    height: 45px;
+    height: 43px;
 
     overflow: hidden;
 
@@ -787,11 +896,9 @@ button[data-baseweb="tab"][aria-selected="true"] {
 
 
 .side-train {
-
     position: absolute;
 
     bottom: 4px;
-
     left: -120px;
 
     display: flex;
@@ -804,9 +911,7 @@ button[data-baseweb="tab"][aria-selected="true"] {
 
 
 .train-carriage {
-
     width: 31px;
-
     height: 20px;
 
     background: #dce8f0;
@@ -824,17 +929,14 @@ button[data-baseweb="tab"][aria-selected="true"] {
 
 
 .train-carriage::before {
-
     content: "";
 
     position: absolute;
 
     width: 8px;
-
     height: 7px;
 
     left: 5px;
-
     top: 4px;
 
     background: #49b8ff;
@@ -847,13 +949,11 @@ button[data-baseweb="tab"][aria-selected="true"] {
 
 
 .train-carriage::after {
-
     content: "●  ●";
 
     position: absolute;
 
     bottom: -9px;
-
     left: 3px;
 
     color: #9aaab5;
@@ -862,18 +962,13 @@ button[data-baseweb="tab"][aria-selected="true"] {
 }
 
 
-/* Train head faces RIGHT */
-
 .train-head {
-
     width: 38px;
-
     height: 25px;
 
     position: relative;
 
     background:
-
         linear-gradient(
             90deg,
             #e6eef4,
@@ -889,17 +984,14 @@ button[data-baseweb="tab"][aria-selected="true"] {
 
 
 .train-head::before {
-
     content: "";
 
     position: absolute;
 
     width: 11px;
-
     height: 9px;
 
     right: 5px;
-
     top: 4px;
 
     background: #123a58;
@@ -910,17 +1002,14 @@ button[data-baseweb="tab"][aria-selected="true"] {
 
 
 .train-head::after {
-
     content: "";
 
     position: absolute;
 
     width: 5px;
-
     height: 5px;
 
     right: -4px;
-
     top: 14px;
 
     border-radius: 50%;
@@ -945,25 +1034,22 @@ button[data-baseweb="tab"][aria-selected="true"] {
 }
 
 
-/* ==========================================================
+/* ----------------------------------------------------------
    DIVIDERS / FOOTER
-   ========================================================== */
+   ---------------------------------------------------------- */
 
 hr {
-
     border-color:
         rgba(110, 180, 230, 0.12) !important;
 }
 
 
 footer {
-
     visibility: hidden;
 }
 
 </style>
-    """,
-
+""",
     unsafe_allow_html=True
 )
 
@@ -975,16 +1061,27 @@ footer {
 with st.sidebar:
 
     # --------------------------------------------------------
-    # Sidebar title
+    # Sidebar branding
+    #
+    # IMPORTANT:
+    # HTML is kept as a single string so Streamlit does not
+    # interpret indented HTML as a Markdown code block.
     # --------------------------------------------------------
 
-    st.title(
-        "Track Access Planner"
+    sidebar_brand_html = (
+        '<div class="sidebar-brand">'
+        '<div class="sidebar-brand-title">'
+        'Track Access Planner'
+        '</div>'
+        '<div class="sidebar-brand-subtitle">'
+        'Network Planning &amp; Possession Control'
+        '</div>'
+        '</div>'
     )
 
-
-    st.caption(
-        "Network Planning & Possession Control"
+    st.markdown(
+        sidebar_brand_html,
+        unsafe_allow_html=True
     )
 
 
@@ -1023,46 +1120,107 @@ with st.sidebar:
 
         }[value],
 
-        label_visibility=
-            "collapsed"
+        label_visibility="collapsed"
     )
 
 
     # --------------------------------------------------------
-    # Scenario descriptions
+    # Scenario A information
     # --------------------------------------------------------
 
     if scenario == "A":
 
-        st.caption(
-            "Nominal supply enforced · "
-            "Early Closure / Late Opening disabled · "
-            "schedule extension permitted"
+        strategy_html = (
+            '<div class="strategy-panel">'
+
+            '<div class="strategy-row">'
+            '<span class="strategy-dot-blue"></span>'
+            '<span>NOMINAL CAPACITY ENFORCED</span>'
+            '</div>'
+
+            '<div class="strategy-row">'
+            '<span class="strategy-dot-blue"></span>'
+            '<span>ECLO DISABLED</span>'
+            '</div>'
+
+            '<div class="strategy-row">'
+            '<span class="strategy-dot-yellow"></span>'
+            '<span>SCHEDULE EXTENSION PERMITTED</span>'
+            '</div>'
+
+            '</div>'
         )
 
+
+    # --------------------------------------------------------
+    # Scenario B information
+    # --------------------------------------------------------
 
     elif scenario == "B":
 
-        st.caption(
-            "Planned completion dates enforced · "
-            "additional capacity and Early Closure / "
-            "Late Opening permitted"
+        strategy_html = (
+            '<div class="strategy-panel">'
+
+            '<div class="strategy-row">'
+            '<span class="strategy-dot-green"></span>'
+            '<span>DEADLINES ENFORCED</span>'
+            '</div>'
+
+            '<div class="strategy-row">'
+            '<span class="strategy-dot-blue"></span>'
+            '<span>EXCESS CAPACITY PERMITTED</span>'
+            '</div>'
+
+            '<div class="strategy-row">'
+            '<span class="strategy-dot-yellow"></span>'
+            '<span>ECLO PERMITTED</span>'
+            '</div>'
+
+            '</div>'
         )
 
+
+    # --------------------------------------------------------
+    # Scenario C information
+    # --------------------------------------------------------
 
     else:
 
-        st.caption(
-            "Controlled capacity flexibility · "
-            "schedule and operational impacts balanced"
+        strategy_html = (
+            '<div class="strategy-panel">'
+
+            '<div class="strategy-row">'
+            '<span class="strategy-dot-blue"></span>'
+            '<span>CAPACITY FLEXIBILITY CONTROLLED</span>'
+            '</div>'
+
+            '<div class="strategy-row">'
+            '<span class="strategy-dot-yellow"></span>'
+            '<span>DELIVERY / CAPACITY BALANCED</span>'
+            '</div>'
+
+            '<div class="strategy-row">'
+            '<span class="strategy-dot-green"></span>'
+            '<span>ECLO CONTROLLED</span>'
+            '</div>'
+
+            '</div>'
         )
+
+
+    # Display scenario information
+
+    st.markdown(
+        strategy_html,
+        unsafe_allow_html=True
+    )
 
 
     st.divider()
 
 
     # --------------------------------------------------------
-    # Network input
+    # Network files
     # --------------------------------------------------------
 
     st.subheader(
@@ -1080,20 +1238,20 @@ with st.sidebar:
             "csv"
         ],
 
-        label_visibility=
-            "collapsed"
+        label_visibility="collapsed"
     )
 
 
+    # Number of uploaded files
+
     file_count = (
-
         len(uploaded_files)
-
         if uploaded_files
-
         else 0
     )
 
+
+    # All 8 files required
 
     files_ready = (
         file_count == 8
@@ -1118,7 +1276,7 @@ with st.sidebar:
     elif file_count > 0:
 
         st.warning(
-            f"● Incomplete instance · {file_count}/8"
+            f"● Incomplete network · {file_count}/8"
         )
 
 
@@ -1130,7 +1288,7 @@ with st.sidebar:
 
 
     # --------------------------------------------------------
-    # Uploaded filenames
+    # Uploaded file list
     # --------------------------------------------------------
 
     if uploaded_files:
@@ -1150,7 +1308,7 @@ with st.sidebar:
 
 
     # --------------------------------------------------------
-    # Solver button
+    # Solver
     # --------------------------------------------------------
 
     st.subheader(
@@ -1166,8 +1324,7 @@ with st.sidebar:
 
         width="stretch",
 
-        disabled=
-            not files_ready
+        disabled=not files_ready
     )
 
 
@@ -1186,12 +1343,30 @@ with st.sidebar:
 
 
 # ============================================================
-# 4. MAIN TITLE PANEL
+# 4. CHECK WHETHER A PLAN EXISTS
 # ============================================================
 
-st.markdown(
+plan_exists = (
+    "df_acc"
+    in st.session_state
+)
 
-    '<div class="main-header-panel">'
+
+# ============================================================
+# 5. MAIN HEADER
+# ============================================================
+
+header_class = (
+    "main-header-panel compact"
+    if plan_exists
+    else "main-header-panel"
+)
+
+
+# Use one HTML string to avoid Markdown formatting problems
+
+main_header_html = (
+    f'<div class="{header_class}">'
 
     '<div class="header-eyebrow">'
     'LTA · NETWORK OPERATIONS'
@@ -1212,29 +1387,32 @@ st.markdown(
     '<span>PLANNING SYSTEM ONLINE</span>'
     '</div>'
 
-    '</div>',
+    '</div>'
+)
 
+
+st.markdown(
+    main_header_html,
     unsafe_allow_html=True
 )
 
 
 # ============================================================
-# 5. RUN SCHEDULER
+# 6. RUN SCHEDULER
 # ============================================================
 
 if run_button:
-
-    # --------------------------------------------------------
-    # Animated train while scheduler is running
-    # --------------------------------------------------------
 
     animation_placeholder = (
         st.empty()
     )
 
 
-    animation_placeholder.markdown(
+    # --------------------------------------------------------
+    # Train animation
+    # --------------------------------------------------------
 
+    train_html = (
         '<div class="train-status-row">'
 
         '<span>'
@@ -1255,8 +1433,12 @@ if run_button:
 
         '</div>'
 
-        '</div>',
+        '</div>'
+    )
 
+
+    animation_placeholder.markdown(
+        train_html,
         unsafe_allow_html=True
     )
 
@@ -1264,7 +1446,7 @@ if run_button:
     try:
 
         # ----------------------------------------------------
-        # Package uploaded CSV files
+        # Package uploaded files
         # ----------------------------------------------------
 
         file_dict = {
@@ -1278,7 +1460,7 @@ if run_button:
 
 
         # ----------------------------------------------------
-        # Run scheduling engine
+        # Run scheduler
         # ----------------------------------------------------
 
         df_acc, df_occ, df_res = (
@@ -1287,8 +1469,7 @@ if run_button:
 
                 file_dict,
 
-                scenario=
-                    scenario
+                scenario=scenario
             )
         )
 
@@ -1320,6 +1501,11 @@ if run_button:
         animation_placeholder.empty()
 
 
+        # Refresh page after schedule is generated
+
+        st.rerun()
+
+
     except Exception as error:
 
         animation_placeholder.empty()
@@ -1334,13 +1520,10 @@ if run_button:
 
 
 # ============================================================
-# 6. SCREEN BEFORE SCHEDULE EXISTS
+# 7. PRE-SCHEDULE HOME SCREEN
 # ============================================================
 
 if "df_acc" not in st.session_state:
-
-    st.write("")
-
 
     status1, status2, status3 = (
         st.columns(3)
@@ -1379,24 +1562,27 @@ if "df_acc" not in st.session_state:
             )
 
 
-        st.markdown(
-
+        network_card_html = (
             '<div class="white-info-card">'
 
             '<div class="white-card-title">'
             'Network'
             '</div>'
 
-            f'<div class="white-card-value">'
+            '<div class="white-card-value">'
             f'{network_value}'
-            f'</div>'
+            '</div>'
 
-            f'<div class="white-card-caption">'
+            '<div class="white-card-caption">'
             f'{network_caption}'
-            f'</div>'
+            '</div>'
 
-            '</div>',
+            '</div>'
+        )
 
+
+        st.markdown(
+            network_card_html,
             unsafe_allow_html=True
         )
 
@@ -1421,24 +1607,27 @@ if "df_acc" not in st.session_state:
         }[scenario]
 
 
-        st.markdown(
-
+        planning_card_html = (
             '<div class="white-info-card">'
 
             '<div class="white-card-title">'
             'Planning Mode'
             '</div>'
 
-            f'<div class="white-card-value">'
+            '<div class="white-card-value">'
             f'{mode_name}'
-            f'</div>'
+            '</div>'
 
             '<div class="white-card-caption">'
             'Current operating strategy'
             '</div>'
 
-            '</div>',
+            '</div>'
+        )
 
+
+        st.markdown(
+            planning_card_html,
             unsafe_allow_html=True
         )
 
@@ -1467,24 +1656,27 @@ if "df_acc" not in st.session_state:
             )
 
 
-        st.markdown(
-
+        solver_card_html = (
             '<div class="white-info-card">'
 
             '<div class="white-card-title">'
             'Solver'
             '</div>'
 
-            f'<div class="white-card-value">'
+            '<div class="white-card-value">'
             f'{solver_value}'
-            f'</div>'
+            '</div>'
 
             '<div class="white-card-caption">'
             'Possession allocation engine'
             '</div>'
 
-            '</div>',
+            '</div>'
+        )
 
+
+        st.markdown(
+            solver_card_html,
             unsafe_allow_html=True
         )
 
@@ -1493,7 +1685,7 @@ if "df_acc" not in st.session_state:
 
 
 # ============================================================
-# 7. LOAD GENERATED RESULTS
+# 8. LOAD GENERATED RESULTS
 # ============================================================
 
 df_acc = (
@@ -1525,12 +1717,10 @@ active_scenario = (
 
 
 # ============================================================
-# 8. CALCULATE MAIN KPIs
+# 9. CALCULATE KPIs
 # ============================================================
 
-# ------------------------------------------------------------
 # Activities
-# ------------------------------------------------------------
 
 if not df_acc.empty:
 
@@ -1547,18 +1737,14 @@ else:
     total_activities = 0
 
 
-# ------------------------------------------------------------
 # Access allocations
-# ------------------------------------------------------------
 
 total_accesses = (
     len(df_acc)
 )
 
 
-# ------------------------------------------------------------
-# Late contracts
-# ------------------------------------------------------------
+# Contracts late
 
 if not df_res.empty:
 
@@ -1577,9 +1763,7 @@ else:
     late_contracts = 0
 
 
-# ------------------------------------------------------------
 # Total overrun
-# ------------------------------------------------------------
 
 if not df_res.empty:
 
@@ -1596,9 +1780,7 @@ else:
     total_overrun = 0
 
 
-# ------------------------------------------------------------
 # Final planning week
-# ------------------------------------------------------------
 
 if not df_acc.empty:
 
@@ -1615,9 +1797,7 @@ else:
     max_week = 0
 
 
-# ------------------------------------------------------------
 # ECLO accesses
-# ------------------------------------------------------------
 
 if (
     not df_acc.empty
@@ -1637,20 +1817,35 @@ else:
     eclo_nights = 0
 
 
+# Duplicate access IDs
+
+duplicates = int(
+
+    df_acc.duplicated(
+
+        subset=[
+            "activity_id",
+            "access_seq"
+        ]
+
+    ).sum()
+)
+
+
 # ============================================================
-# 9. WHITE KPI HELPER
+# 10. KPI CARD HELPER
 # ============================================================
 
 def white_kpi(
     column,
     label,
     value,
-    danger=False
+    state="normal"
 ):
 
     with column:
 
-        if danger:
+        if state == "danger":
 
             label_class = (
                 "white-kpi-danger-label"
@@ -1658,6 +1853,17 @@ def white_kpi(
 
             value_class = (
                 "white-kpi-danger-value"
+            )
+
+
+        elif state == "success":
+
+            label_class = (
+                "white-kpi-success-label"
+            )
+
+            value_class = (
+                "white-kpi-success-value"
             )
 
 
@@ -1672,30 +1878,30 @@ def white_kpi(
             )
 
 
-        st.markdown(
-
-            f'<div class="white-kpi-card">'
+        card_html = (
+            '<div class="white-kpi-card">'
 
             f'<div class="{label_class}">'
             f'{label}'
-            f'</div>'
+            '</div>'
 
             f'<div class="{value_class}">'
             f'{value}'
-            f'</div>'
+            '</div>'
 
-            f'</div>',
+            '</div>'
+        )
 
+
+        st.markdown(
+            card_html,
             unsafe_allow_html=True
         )
 
 
 # ============================================================
-# 10. CURRENT PLAN TITLE
+# 11. CURRENT PLAN SUMMARY
 # ============================================================
-
-st.write("")
-
 
 mode_display = {
 
@@ -1717,7 +1923,7 @@ st.subheader(
 
 
 # ============================================================
-# 11. MAIN KPI CARDS
+# 12. KPI ROW
 # ============================================================
 
 kpi1, kpi2, kpi3, kpi4, kpi5 = (
@@ -1739,18 +1945,31 @@ white_kpi(
 )
 
 
-white_kpi(
-    kpi3,
-    "Contracts Late",
-    late_contracts,
-    danger=
-        late_contracts > 0
-)
+# Late contract colour
+
+if late_contracts == 0:
+
+    white_kpi(
+        kpi3,
+        "Contracts Late",
+        late_contracts,
+        state="success"
+    )
+
+
+else:
+
+    white_kpi(
+        kpi3,
+        "Contracts Late",
+        late_contracts,
+        state="danger"
+    )
 
 
 white_kpi(
     kpi4,
-    "Early Closure / Late Opening",
+    "ECLO Accesses",
     eclo_nights
 )
 
@@ -1762,11 +1981,76 @@ white_kpi(
 )
 
 
-st.divider()
+# ============================================================
+# 13. SCHEDULE HEALTH STRIP
+# ============================================================
+
+schedule_dot = (
+    "health-dot-green"
+    if total_activities > 0
+    else "health-dot-red"
+)
+
+
+late_dot = (
+    "health-dot-green"
+    if late_contracts == 0
+    else "health-dot-red"
+)
+
+
+duplicate_dot = (
+    "health-dot-green"
+    if duplicates == 0
+    else "health-dot-red"
+)
+
+
+health_html = (
+    '<div class="health-strip">'
+
+    '<div class="health-item">'
+    f'<span class="{schedule_dot}"></span>'
+    '<span>SCHEDULE GENERATED</span>'
+    '</div>'
+
+    '<div class="health-item">'
+    '<span class="health-dot-blue"></span>'
+    f'<span>{total_activities} ACTIVITIES</span>'
+    '</div>'
+
+    '<div class="health-item">'
+    f'<span class="{late_dot}"></span>'
+    f'<span>{late_contracts} CONTRACTS LATE</span>'
+    '</div>'
+
+    '<div class="health-item">'
+    f'<span class="{duplicate_dot}"></span>'
+    f'<span>{duplicates} DUPLICATE ACCESS IDs</span>'
+    '</div>'
+
+    '<div class="health-item">'
+    '<span class="health-dot-yellow"></span>'
+    f'<span>{eclo_nights} ECLO ACCESSES</span>'
+    '</div>'
+
+    '<div class="health-item">'
+    '<span class="health-dot-blue"></span>'
+    '<span>READY TO EXPORT</span>'
+    '</div>'
+
+    '</div>'
+)
+
+
+st.markdown(
+    health_html,
+    unsafe_allow_html=True
+)
 
 
 # ============================================================
-# 12. MAIN TABS
+# 14. MAIN TABS
 # ============================================================
 
 (
@@ -1789,7 +2073,7 @@ st.divider()
 
 
 # ============================================================
-# 13. POSSESSION PLAN TAB
+# 15. POSSESSION PLAN TAB
 # ============================================================
 
 with tab_plan:
@@ -1820,9 +2104,7 @@ with tab_plan:
     )
 
 
-    # --------------------------------------------------------
     # Activity filter
-    # --------------------------------------------------------
 
     with filter1:
 
@@ -1844,9 +2126,7 @@ with tab_plan:
         )
 
 
-    # --------------------------------------------------------
     # Access type filter
-    # --------------------------------------------------------
 
     with filter2:
 
@@ -1864,9 +2144,7 @@ with tab_plan:
         )
 
 
-    # --------------------------------------------------------
     # Planning week filter
-    # --------------------------------------------------------
 
     with filter3:
 
@@ -1898,7 +2176,7 @@ with tab_plan:
 
 
     # --------------------------------------------------------
-    # Apply filters
+    # Filter schedule
     # --------------------------------------------------------
 
     filtered_acc = (
@@ -1971,9 +2249,9 @@ with tab_plan:
         )
 
 
-    # ========================================================
-    # POSSESSION SCHEDULE CHART
-    # ========================================================
+    # --------------------------------------------------------
+    # Possession schedule chart
+    # --------------------------------------------------------
 
     if filtered_acc.empty:
 
@@ -1989,8 +2267,6 @@ with tab_plan:
         )
 
 
-        # Activity labels
-
         timeline[
             "Activity"
         ] = (
@@ -2000,10 +2276,6 @@ with tab_plan:
             ].astype(str)
         )
 
-
-        # ----------------------------------------------------
-        # Convert ECLO flag into readable names
-        # ----------------------------------------------------
 
         timeline[
             "Access Type"
@@ -2024,67 +2296,42 @@ with tab_plan:
         )
 
 
-        # ====================================================
-        # IMPORTANT LEGEND / MARKER DESIGN
+        # ----------------------------------------------------
+        # Marker design
         #
-        # STANDARD ACCESS
-        #   Green Diamond
-        #
-        # ECLO
-        #   Yellow Circle
-        # ====================================================
+        # Standard = green diamond
+        # ECLO     = yellow circle
+        # ----------------------------------------------------
 
         fig_plan = px.scatter(
 
             timeline,
 
-            x=
-                "week",
+            x="week",
 
-            y=
-                "Activity",
+            y="Activity",
 
-            # Colour depends on access type
-            color=
-                "Access Type",
+            color="Access Type",
 
-            # Shape depends on access type
-            symbol=
-                "Access Type",
-
-            # ------------------------------------------------
-            # EXACT COLOURS
-            # ------------------------------------------------
+            symbol="Access Type",
 
             color_discrete_map={
 
-                # Standard = classic/lime green
                 "Standard Access":
                     "#32CD32",
 
-                # ECLO = yellow
                 "Early Closure / Late Opening":
                     "#FFD84D"
             },
 
-            # ------------------------------------------------
-            # EXACT SHAPES
-            # ------------------------------------------------
-
             symbol_map={
 
-                # STANDARD ACCESS = GREEN DIAMOND
                 "Standard Access":
                     "diamond",
 
-                # ECLO = YELLOW CIRCLE
                 "Early Closure / Late Opening":
                     "circle"
             },
-
-            # ------------------------------------------------
-            # Hover information
-            # ------------------------------------------------
 
             hover_data=[
                 "access_seq",
@@ -2098,40 +2345,30 @@ with tab_plan:
 
             height=max(
 
-                520,
+                500,
 
                 timeline[
                     "activity_id"
-                ].nunique() * 20
+                ].nunique() * 19
             )
         )
 
-
-        # ----------------------------------------------------
-        # Marker appearance
-        # ----------------------------------------------------
 
         fig_plan.update_traces(
 
             marker=dict(
 
-                size=12,
+                size=11,
 
-                # Light border around marker
                 line=dict(
 
                     width=1,
 
-                    color=
-                        "#FFF4D6"
+                    color="#F5F8FA"
                 )
             )
         )
 
-
-        # ----------------------------------------------------
-        # Chart appearance
-        # ----------------------------------------------------
 
         fig_plan.update_layout(
 
@@ -2142,8 +2379,14 @@ with tab_plan:
                 "rgba(0,0,0,0)",
 
             font=dict(
-                color=
-                    "#dceaf6"
+                color="#dceaf6"
+            ),
+
+            margin=dict(
+                l=10,
+                r=10,
+                t=20,
+                b=10
             ),
 
             xaxis=dict(
@@ -2151,7 +2394,7 @@ with tab_plan:
                 dtick=1,
 
                 gridcolor=
-                    "rgba(255,255,255,0.07)",
+                    "rgba(255,255,255,0.065)",
 
                 rangeslider=dict(
                     visible=True
@@ -2164,14 +2407,9 @@ with tab_plan:
                     "rgba(255,255,255,0.04)"
             ),
 
-            # Remove redundant legend title
             legend_title_text=""
         )
 
-
-        # ----------------------------------------------------
-        # Display chart
-        # ----------------------------------------------------
 
         st.plotly_chart(
 
@@ -2200,7 +2438,7 @@ with tab_plan:
 
 
 # ============================================================
-# 14. NETWORK CAPACITY TAB
+# 16. NETWORK CAPACITY TAB
 # ============================================================
 
 with tab_capacity:
@@ -2226,7 +2464,7 @@ with tab_capacity:
     else:
 
         # ----------------------------------------------------
-        # Location/week summary
+        # Summarise occupancy
         # ----------------------------------------------------
 
         occupancy_summary = (
@@ -2258,7 +2496,7 @@ with tab_capacity:
 
 
         # ----------------------------------------------------
-        # Total location demand
+        # Location totals
         # ----------------------------------------------------
 
         location_totals = (
@@ -2297,7 +2535,7 @@ with tab_capacity:
 
 
         # ----------------------------------------------------
-        # Capacity KPI cards
+        # Capacity KPIs
         # ----------------------------------------------------
 
         cap1, cap2, cap3 = (
@@ -2347,9 +2585,9 @@ with tab_capacity:
         st.divider()
 
 
-        # ====================================================
-        # HIGHEST-DEMAND LOCATIONS
-        # ====================================================
+        # ----------------------------------------------------
+        # Highest-demand locations
+        # ----------------------------------------------------
 
         st.subheader(
             "Highest-Demand Locations"
@@ -2397,23 +2635,21 @@ with tab_capacity:
 
 
         # ----------------------------------------------------
-        # Green capacity bars
+        # Green demand bars
         # ----------------------------------------------------
 
         fig_pressure = px.bar(
 
             busiest,
 
-            x=
-                "total_possessions",
+            x="total_possessions",
 
-            y=
-                "location_id",
+            y="location_id",
 
-            orientation=
-                "h",
+            orientation="h",
 
             hover_data={
+
                 "total_activities":
                     True,
 
@@ -2431,6 +2667,7 @@ with tab_capacity:
             },
 
             labels={
+
                 "total_possessions":
                     "Total Possessions",
 
@@ -2442,24 +2679,19 @@ with tab_capacity:
 
         fig_pressure.update_traces(
 
-            marker_color=
-                "#2E8B57",
+            marker_color="#2E8B57",
 
-            marker_line_color=
-                "#66C28A",
+            marker_line_color="#66C28A",
 
-            marker_line_width=
-                1
+            marker_line_width=1
         )
 
 
         fig_pressure.update_layout(
 
             height=max(
-
-                450,
-
-                top_n * 38
+                420,
+                top_n * 36
             ),
 
             paper_bgcolor=
@@ -2469,8 +2701,14 @@ with tab_capacity:
                 "rgba(0,0,0,0)",
 
             font=dict(
-                color=
-                    "#dceaf6"
+                color="#dceaf6"
+            ),
+
+            margin=dict(
+                l=10,
+                r=10,
+                t=20,
+                b=10
             ),
 
             xaxis=dict(
@@ -2499,18 +2737,12 @@ with tab_capacity:
         st.divider()
 
 
-        # ====================================================
-        # LOCATION INSPECTOR
-        # ====================================================
+        # ----------------------------------------------------
+        # Location inspector
+        # ----------------------------------------------------
 
         st.subheader(
             "Location Inspector"
-        )
-
-
-        st.caption(
-            "Inspect weekly possession demand "
-            "for an individual network location."
         )
 
 
@@ -2538,7 +2770,8 @@ with tab_capacity:
 
                 occupancy_summary[
                     "location_id"
-                ] == selected_location
+                ]
+                == selected_location
             ]
 
             .sort_values(
@@ -2553,7 +2786,8 @@ with tab_capacity:
 
                 df_occ[
                     "location_id"
-                ] == selected_location
+                ]
+                == selected_location
             ]
 
             .sort_values(
@@ -2562,9 +2796,7 @@ with tab_capacity:
         )
 
 
-        # ----------------------------------------------------
-        # Location KPIs
-        # ----------------------------------------------------
+        # Location KPI cards
 
         loc1, loc2, loc3 = (
             st.columns(3)
@@ -2607,25 +2839,22 @@ with tab_capacity:
         )
 
 
-        # ----------------------------------------------------
         # Weekly location demand
-        # ----------------------------------------------------
 
         fig_location = px.bar(
 
             selected_summary,
 
-            x=
-                "week",
+            x="week",
 
-            y=
-                "possessions",
+            y="possessions",
 
             hover_data=[
                 "activities"
             ],
 
             labels={
+
                 "week":
                     "Planning Week",
 
@@ -2640,20 +2869,17 @@ with tab_capacity:
 
         fig_location.update_traces(
 
-            marker_color=
-                "#2E8B57",
+            marker_color="#2E8B57",
 
-            marker_line_color=
-                "#66C28A",
+            marker_line_color="#66C28A",
 
-            marker_line_width=
-                1
+            marker_line_width=1
         )
 
 
         fig_location.update_layout(
 
-            height=390,
+            height=370,
 
             paper_bgcolor=
                 "rgba(0,0,0,0)",
@@ -2662,8 +2888,14 @@ with tab_capacity:
                 "rgba(0,0,0,0)",
 
             font=dict(
-                color=
-                    "#dceaf6"
+                color="#dceaf6"
+            ),
+
+            margin=dict(
+                l=10,
+                r=10,
+                t=45,
+                b=10
             ),
 
             xaxis=dict(
@@ -2692,10 +2924,6 @@ with tab_capacity:
         )
 
 
-        # ----------------------------------------------------
-        # Location ledger
-        # ----------------------------------------------------
-
         with st.expander(
             "Location Possession Ledger"
         ):
@@ -2711,7 +2939,7 @@ with tab_capacity:
 
 
 # ============================================================
-# 15. CONTRACT DELIVERY TAB
+# 17. CONTRACT DELIVERY TAB
 # ============================================================
 
 with tab_delivery:
@@ -2773,7 +3001,7 @@ with tab_delivery:
 
 
         # ----------------------------------------------------
-        # Contract KPI cards
+        # Contract KPIs
         # ----------------------------------------------------
 
         delivery1, delivery2, delivery3 = (
@@ -2791,51 +3019,83 @@ with tab_delivery:
         )
 
 
-        white_kpi(
+        if late_count == 0:
 
-            delivery2,
+            white_kpi(
 
-            "Contracts Late",
+                delivery2,
 
-            late_count,
+                "Contracts Late",
 
-            danger=
-                late_count > 0
-        )
+                late_count,
+
+                state="success"
+            )
 
 
-        white_kpi(
+        else:
 
-            delivery3,
+            white_kpi(
 
-            "Total Overrun Days",
+                delivery2,
 
-            overrun_total
-        )
+                "Contracts Late",
+
+                late_count,
+
+                state="danger"
+            )
+
+
+        if overrun_total == 0:
+
+            white_kpi(
+
+                delivery3,
+
+                "Total Overrun Days",
+
+                overrun_total,
+
+                state="success"
+            )
+
+
+        else:
+
+            white_kpi(
+
+                delivery3,
+
+                "Total Overrun Days",
+
+                overrun_total,
+
+                state="danger"
+            )
 
 
         st.write("")
 
 
         # ----------------------------------------------------
-        # Contract overrun graph
+        # Contract overrun chart
         # ----------------------------------------------------
 
         fig_delivery = px.bar(
 
             performance,
 
-            x=
-                "contract_number",
+            x="contract_number",
 
-            y=
-                "overrun_days",
+            y="overrun_days",
 
             hover_data=[
                 "simulated_completion_date"
             ],
 
             labels={
+
                 "contract_number":
                     "Contract",
 
@@ -2848,24 +3108,19 @@ with tab_delivery:
         )
 
 
-        # Red bars indicate delay
-
         fig_delivery.update_traces(
 
-            marker_color=
-                "#EF5B63",
+            marker_color="#EF5B63",
 
-            marker_line_color=
-                "#FF9AA0",
+            marker_line_color="#FF9AA0",
 
-            marker_line_width=
-                1
+            marker_line_width=1
         )
 
 
         fig_delivery.update_layout(
 
-            height=500,
+            height=450,
 
             paper_bgcolor=
                 "rgba(0,0,0,0)",
@@ -2874,8 +3129,14 @@ with tab_delivery:
                 "rgba(0,0,0,0)",
 
             font=dict(
-                color=
-                    "#dceaf6"
+                color="#dceaf6"
+            ),
+
+            margin=dict(
+                l=10,
+                r=10,
+                t=45,
+                b=10
             ),
 
             xaxis=dict(
@@ -2900,9 +3161,7 @@ with tab_delivery:
         )
 
 
-        # ----------------------------------------------------
-        # Contract warning
-        # ----------------------------------------------------
+        # Contract message
 
         if late_count == 0:
 
@@ -2921,9 +3180,7 @@ with tab_delivery:
             )
 
 
-        # ----------------------------------------------------
         # Contract ledger
-        # ----------------------------------------------------
 
         st.subheader(
             "Contract Delivery Ledger"
@@ -2941,7 +3198,7 @@ with tab_delivery:
 
 
 # ============================================================
-# 16. CONSTRAINTS TAB
+# 18. CONSTRAINTS TAB
 # ============================================================
 
 with tab_constraints:
@@ -2957,30 +3214,13 @@ with tab_constraints:
     )
 
 
-    # --------------------------------------------------------
-    # Duplicate access check
-    # --------------------------------------------------------
-
-    duplicates = int(
-
-        df_acc.duplicated(
-
-            subset=[
-                "activity_id",
-                "access_seq"
-            ]
-
-        ).sum()
-    )
-
-
     check1, check2, check3 = (
         st.columns(3)
     )
 
 
     # --------------------------------------------------------
-    # Schedule status
+    # Schedule card
     # --------------------------------------------------------
 
     white_kpi(
@@ -2996,7 +3236,7 @@ with tab_constraints:
 
 
     # --------------------------------------------------------
-    # ECLO policy status
+    # ECLO status
     # --------------------------------------------------------
 
     if (
@@ -3026,39 +3266,57 @@ with tab_constraints:
 
     with check2:
 
-        st.markdown(
-
+        eclo_card_html = (
             '<div class="white-kpi-card">'
 
             '<div class="white-kpi-label">'
-            'Early Closure / Late Opening Status'
+            'ECLO Status'
             '</div>'
 
             f'<div class="{eclo_status_class}">'
             f'{eclo_status}'
             '</div>'
 
-            '</div>',
+            '</div>'
+        )
 
+
+        st.markdown(
+            eclo_card_html,
             unsafe_allow_html=True
         )
 
 
     # --------------------------------------------------------
-    # Duplicate IDs
+    # Duplicate access IDs
     # --------------------------------------------------------
 
-    white_kpi(
+    if duplicates == 0:
 
-        check3,
+        white_kpi(
 
-        "Duplicate Access IDs",
+            check3,
 
-        duplicates,
+            "Duplicate Access IDs",
 
-        danger=
-            duplicates > 0
-    )
+            duplicates,
+
+            state="success"
+        )
+
+
+    else:
+
+        white_kpi(
+
+            check3,
+
+            "Duplicate Access IDs",
+
+            duplicates,
+
+            state="danger"
+        )
 
 
     st.divider()
@@ -3082,7 +3340,7 @@ with tab_constraints:
 
     else:
 
-        st.warning(
+        st.error(
 
             f"{duplicates} duplicate access "
             "identifier(s) detected."
@@ -3108,7 +3366,7 @@ with tab_constraints:
 
 
 # ============================================================
-# 17. SCHEDULE EXPORT TAB
+# 19. SCHEDULE EXPORT TAB
 # ============================================================
 
 with tab_export:
@@ -3119,7 +3377,12 @@ with tab_export:
 
 
     st.caption(
-        "Operational schedule output package"
+        "Download the generated operational schedule package."
+    )
+
+
+    st.success(
+        "Schedule outputs generated and ready for export."
     )
 
 
@@ -3129,7 +3392,7 @@ with tab_export:
 
 
     # --------------------------------------------------------
-    # SCHEDULE_ACCESS.csv
+    # Schedule Access
     # --------------------------------------------------------
 
     download1.download_button(
@@ -3144,15 +3407,14 @@ with tab_export:
 
         "SCHEDULE_ACCESS.csv",
 
-        mime=
-            "text/csv",
+        mime="text/csv",
 
         width="stretch"
     )
 
 
     # --------------------------------------------------------
-    # SCHEDULE_OCCUPANCY.csv
+    # Schedule Occupancy
     # --------------------------------------------------------
 
     download2.download_button(
@@ -3167,15 +3429,14 @@ with tab_export:
 
         "SCHEDULE_OCCUPANCY.csv",
 
-        mime=
-            "text/csv",
+        mime="text/csv",
 
         width="stretch"
     )
 
 
     # --------------------------------------------------------
-    # RESULTS.csv
+    # Results
     # --------------------------------------------------------
 
     download3.download_button(
@@ -3190,8 +3451,7 @@ with tab_export:
 
         "RESULTS.csv",
 
-        mime=
-            "text/csv",
+        mime="text/csv",
 
         width="stretch"
     )
@@ -3200,9 +3460,9 @@ with tab_export:
     st.divider()
 
 
-    # ========================================================
-    # OUTPUT PREVIEW
-    # ========================================================
+    # --------------------------------------------------------
+    # Output preview
+    # --------------------------------------------------------
 
     st.subheader(
         "Output Preview"
@@ -3222,10 +3482,6 @@ with tab_export:
         horizontal=True
     )
 
-
-    # --------------------------------------------------------
-    # Select dataset
-    # --------------------------------------------------------
 
     if preview == "Schedule Access":
 
@@ -3247,10 +3503,6 @@ with tab_export:
             df_res
         )
 
-
-    # --------------------------------------------------------
-    # Display dataset
-    # --------------------------------------------------------
 
     st.dataframe(
 
