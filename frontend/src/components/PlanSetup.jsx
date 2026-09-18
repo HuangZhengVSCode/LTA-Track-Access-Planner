@@ -28,7 +28,11 @@ export default function PlanSetup({ onRun, loading, error, onClearError }) {
   function accept(nextFiles) {
     onClearError()
     const csvFiles = Array.from(nextFiles).filter((file) => file.name.toLowerCase().endsWith('.csv'))
-    setFiles(csvFiles.slice(0, 8))
+    setFiles((currentFiles) => {
+      const byName = new Map(currentFiles.map((file) => [file.name.toLowerCase(), file]))
+      for (const file of csvFiles) byName.set(file.name.toLowerCase(), file)
+      return [...byName.values()].slice(0, 8)
+    })
   }
 
   return (
@@ -63,10 +67,20 @@ export default function PlanSetup({ onRun, loading, error, onClearError }) {
             onDragLeave={() => setDragging(false)}
             onDrop={(event) => { event.preventDefault(); setDragging(false); accept(event.dataTransfer.files) }}
           >
-            <input ref={inputRef} type="file" accept=".csv" multiple hidden onChange={(event) => accept(event.target.files)} />
+            <input
+              ref={inputRef}
+              type="file"
+              accept=".csv,text/csv"
+              multiple
+              hidden
+              onChange={(event) => {
+                accept(event.target.files)
+                event.target.value = ''
+              }}
+            />
             <span className="dropzone__icon"><UploadCloud size={25} /></span>
-            <strong>Drop eight CSV tables here</strong>
-            <span>or click to browse · 25 MB max per file</span>
+            <strong>Drop CSV tables here</strong>
+            <span>select all eight together or add them one at a time · 25 MB max per file</span>
           </button>
           <div className="file-status-head"><span>Source table manifest</span><strong className={ready ? 'complete' : ''}>{readiness.filter((entry) => entry.file).length} / 8</strong></div>
           <div className="file-manifest">
