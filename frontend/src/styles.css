@@ -109,27 +109,27 @@ button:disabled { cursor: not-allowed; }
   .setup-grid .panel { padding: 18px; }.scenario-card { grid-template-columns: 25px 1fr 20px; padding: 13px; }.dashboard-header > div:first-of-type { display: none; }.dashboard-actions { width: 100%; justify-content: flex-end; }.kpi-grid { grid-template-columns: 1fr; }.kpi-card:last-child { grid-column: auto; }.contract-chart > div { min-width: 35px; }.segmented button { padding: 0 6px; }.segmented svg { display: none; }
 }
 
-/* Global 10% typography increase. The setup hero heading is intentionally excluded. */
-#root { font-size: 17.6px; }
-#root :is(.brand strong) { font-size: 16.5px; }
-#root :is(.brand small, .agency, .scenario-card small, .file-status-head, .file-manifest span, .sidebar__label, .scenario-pill, .rerun-button, .plan-heading span, .filter-row label, .legend, .table-tools, .table-scroll td, .pagination, .mini-kpis span, .inline-select, .bar-rank, .bar-row button, .location-stats span, .status-chip, .contract-bar-area strong, .contract-chart > div > span, .assurance-card small, .assurance-summary span, .export-grid small, .export-grid article > div span, .export-grid button, .segmented button) { font-size: 8.8px; }
-#root :is(.system-state, .section-heading > span, .dropzone > span:last-child, .run-strip__state span, .kpi-card span, .filter-row select, .panel-title select, .inline-select select, .panel-title p, .axis-label, .activity-label, .empty-state span, .search-field input, .bar-row strong, .assurance-card p, .assurance-summary p, .export-grid p) { font-size: 9.9px; }
-#root :is(.eyebrow, .scenario-card__index, .scenario-card p, .clear-files, .run-strip__state strong, .view-header p, .view-title p, .empty-row) { font-size: 11px; }
-#root :is(.setup-intro > p, .scenario-card strong, .assurance-summary h3) { font-size: 15.4px; }
-#root :is(.section-heading h2) { font-size: 17.6px; }
-#root :is(.section-heading p, .sidebar nav button, .primary-button, .location-stats strong) { font-size: 12.1px; }
-#root :is(.dropzone strong, .error-banner, .dashboard-header > div:first-of-type strong, .empty-state strong, .export-grid h3) { font-size: 13.2px; }
-#root :is(.file-manifest small, .launch-shell footer, .sidebar__network span, .sidebar__footer, .dashboard-header > div:first-of-type span, .live-status, .table-scroll th, .weekly-chart span, .contract-bar-area strong, .contract-chart > div > span, .assurance-card small, .assurance-summary span, .export-grid small) { font-size: 7.7px; }
-#root :is(.sidebar__network strong, .kpi-card span, .panel-title p, .legend, .table-tools, .table-scroll td, .pagination, .mini-kpis span, .inline-select, .bar-rank, .bar-row button, .location-stats span, .export-grid article > div span, .export-grid button, .segmented button) { font-size: 9.9px; }
-#root :is(.dashboard-header > div:first-of-type strong, .dropzone strong, .error-banner, .empty-state strong, .export-grid h3) { font-size: 13.2px; }
-#root :is(.plan-heading h1) { font-size: 26.4px; }
-#root :is(.kpi-card strong) { font-size: 22px; }
-#root :is(.view-header h2, .view-title h2) { font-size: 20.9px; }
-#root :is(.panel-title h3, .assurance-card h3) { font-size: 14.3px; }
-#root :is(.mini-kpis strong) { font-size: 19.8px; }
-#root :is(.weekly-chart span) { font-size: 6.6px; }
-#root :is(.assurance-score strong) { font-size: 18.7px; }
-#root :is(.check-index) { font-size: 28.6px; }
+/* Cumulative typography increase. The setup hero heading is intentionally excluded. */
+#root { font-size: 21.12px; }
+#root :is(.brand strong) { font-size: 19.8px; }
+#root :is(.brand small, .agency, .scenario-card small, .file-status-head, .file-manifest span, .sidebar__label, .scenario-pill, .rerun-button, .plan-heading span, .filter-row label, .legend, .table-tools, .table-scroll td, .pagination, .mini-kpis span, .inline-select, .bar-rank, .bar-row button, .location-stats span, .status-chip, .contract-bar-area strong, .contract-chart > div > span, .assurance-card small, .assurance-summary span, .export-grid small, .export-grid article > div span, .export-grid button, .segmented button) { font-size: 10.56px; }
+#root :is(.system-state, .section-heading > span, .dropzone > span:last-child, .run-strip__state span, .kpi-card span, .filter-row select, .panel-title select, .inline-select select, .panel-title p, .axis-label, .activity-label, .empty-state span, .search-field input, .bar-row strong, .assurance-card p, .assurance-summary p, .export-grid p) { font-size: 11.88px; }
+#root :is(.eyebrow, .scenario-card__index, .scenario-card p, .clear-files, .run-strip__state strong, .view-header p, .view-title p, .empty-row) { font-size: 13.2px; }
+#root :is(.setup-intro > p, .scenario-card strong, .assurance-summary h3) { font-size: 18.48px; }
+#root :is(.section-heading h2) { font-size: 21.12px; }
+#root :is(.section-heading p, .sidebar nav button, .primary-button, .location-stats strong) { font-size: 14.52px; }
+#root :is(.dropzone strong, .error-banner, .dashboard-header > div:first-of-type strong, .empty-state strong, .export-grid h3) { font-size: 15.84px; }
+#root :is(.file-manifest small, .launch-shell footer, .sidebar__network span, .sidebar__footer, .dashboard-header > div:first-of-type span, .live-status, .table-scroll th, .weekly-chart span, .contract-bar-area strong, .contract-chart > div > span, .assurance-card small, .assurance-summary span, .export-grid small) { font-size: 9.24px; }
+#root :is(.sidebar__network strong, .kpi-card span, .panel-title p, .legend, .table-tools, .table-scroll td, .pagination, .mini-kpis span, .inline-select, .bar-rank, .bar-row button, .location-stats span, .export-grid article > div span, .export-grid button, .segmented button) { font-size: 11.88px; }
+#root :is(.dashboard-header > div:first-of-type strong, .dropzone strong, .error-banner, .empty-state strong, .export-grid h3) { font-size: 15.84px; }
+#root :is(.plan-heading h1) { font-size: 31.68px; }
+#root :is(.kpi-card strong) { font-size: 26.4px; }
+#root :is(.view-header h2, .view-title h2) { font-size: 25.08px; }
+#root :is(.panel-title h3, .assurance-card h3) { font-size: 17.16px; }
+#root :is(.mini-kpis strong) { font-size: 23.76px; }
+#root :is(.weekly-chart span) { font-size: 7.92px; }
+#root :is(.assurance-score strong) { font-size: 22.44px; }
+#root :is(.check-index) { font-size: 34.32px; }
 
-/* Eight-pixel labels retain the same 10% scale despite the mixed font rules above. */
-#root :is(.run-strip__state span, .axis-label, .activity-label, .legend, .table-tools, .table-scroll td, .pagination, .mini-kpis span, .inline-select, .bar-rank, .bar-row button, .location-stats span, .assurance-score, .export-grid article > div span, .export-grid button, .segmented button) { font-size: 8.8px; }
+/* Eight-pixel labels retain the same cumulative scale despite the mixed font rules above. */
+#root :is(.run-strip__state span, .axis-label, .activity-label, .legend, .table-tools, .table-scroll td, .pagination, .mini-kpis span, .inline-select, .bar-rank, .bar-row button, .location-stats span, .assurance-score, .export-grid article > div span, .export-grid button, .segmented button) { font-size: 10.56px; }
